@@ -14,21 +14,21 @@ class Solution:
 
 
 class TestTwoSum(TestCase):
-    def test_four_element_list(self):
+    def test_two_sum_increasing_values(self):
         numbers: list[int] = [2, 7 ,11, 15]
         target: int = 9
         expected: list[int] = [0, 1]
         actual: list[int] = Solution().twoSum(numbers, target)
         self.assertEqual(expected, actual)
     
-    def test_three_element_list(self):
+    def test_two_sum_random_values(self):
         numbers: list[int] = [3, 2, 4]
         target: int = 6
         expected: list[int] = [1, 2]
         actual: list[int] = Solution().twoSum(numbers, target)
         self.assertEqual(expected, actual)
 
-    def test_two_element_list(self):
+    def test_two_sum_same_element(self):
         numbers: list[int] = [3, 3]
         target: int = 6
         expected: list[int] = [0, 1]
