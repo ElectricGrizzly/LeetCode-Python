@@ -2,7 +2,7 @@ from unittest import main, TestCase
 
 
 class Solution:
-    # LeetCode annoyingly doesn't follow PEP 8 function naming
+    # LeetCode annoyingly doesn't follow PEP 8 method naming
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
@@ -17,7 +17,7 @@ class Solution:
         return s_letter_counts == t_letter_counts
 
 
-class TestContainsDuplicate(TestCase):
+class TestValidAnagram(TestCase):
     def test_valid_anagram(self):
         target: str = "anagram"
         potential_anagram: str = "nagaram"

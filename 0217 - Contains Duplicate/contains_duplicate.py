@@ -2,7 +2,7 @@ from unittest import main, TestCase
 
 
 class Solution:
-    # LeetCode annoyingly doesn't follow PEP 8 function naming
+    # LeetCode annoyingly doesn't follow PEP 8 method naming
     def containsDuplicate(self, nums: list[int]) -> bool:
         number_set: set[int] = set()
         for number in nums:
@@ -10,6 +10,7 @@ class Solution:
                 return True
             number_set.add(number)
         return False
+
 
 class TestContainsDuplicate(TestCase):
     def test_when_duplicate_in_small_list(self):
@@ -23,6 +24,7 @@ class TestContainsDuplicate(TestCase):
     def test_when_no_duplicate_in_small_list(self):
         numbers: list[int] = [1, 2, 3, 4]
         self.assertFalse(Solution().containsDuplicate(numbers))
+
 
 if __name__ == '__main__':
     main()
