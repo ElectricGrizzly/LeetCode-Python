@@ -7,14 +7,14 @@ class Solution:
         if len(s) != len(t):
             return False
         
-        s_letter_counts: dict[str, int] = {}
-        t_letter_counts: dict[str, int] = {}
+        s_count_by_character: dict[str, int] = {}
+        t_count_by_character: dict[str, int] = {}
 
         for index in range(len(s)):
-            s_letter_counts[s[index]] = s_letter_counts.get(s[index], 0) + 1
-            t_letter_counts[t[index]] = t_letter_counts.get(t[index], 0) + 1
+            s_count_by_character[s[index]] = s_count_by_character.get(s[index], 0) + 1
+            t_count_by_character[t[index]] = t_count_by_character.get(t[index], 0) + 1
         
-        return s_letter_counts == t_letter_counts
+        return s_count_by_character == t_count_by_character
 
 
 class TestValidAnagram(TestCase):
@@ -27,6 +27,7 @@ class TestValidAnagram(TestCase):
         target: str = "rat"
         potential_anagram: str = "car"
         self.assertFalse(Solution().isAnagram(target, potential_anagram))
+
 
 if __name__ == '__main__':
     main()
